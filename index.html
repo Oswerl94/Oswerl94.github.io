@@ -1,42 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Oswer Leiva – Web Portfolio</title>
+    <title>Oswer's Moto Repair Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 2rem;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: #00529B;
+        header {
+            background-color: #cc0000;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+            text-align: center;
         }
         nav a {
-            display: block;
-            margin: 0.5rem 0;
+            color: #f2f2f2;
+            margin: 0 1rem;
             text-decoration: none;
-            color: #00529B;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        .container {
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .services li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background-color: #262626;
+            text-align: center;
+            padding: 1rem;
+            color: #999;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Web Programming Portfolio</h1>
-    <p>Hello, my name is Oswer Leiva. This page will showcase my work throughout the course.</p>
+    <header>
+        <h1>Oswer's Moto Repair Shop</h1>
+        <p>Your ride. Our mission.</p>
+    </header>
 
-    <h2>Assignments</h2>
     <nav>
-        <a href="#">Assignment 1 – [Coming Soon]</a>
-        <a href="#">Assignment 2 – [Coming Soon]</a>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
     </nav>
 
+    <div class="container">
+        <section class="section">
+            <h2>Welcome</h2>
+            <p>This site serves as my course portfolio for Web Programming. It’s designed to simulate a real motorcycle repair business while showcasing all my project work as I complete it.</p>
+        </section>
+
+        <section class="section">
+            <h2>Services Offered</h2>
+            <ul class="services">
+                <li>Routine Maintenance</li>
+                <li>Engine Diagnostics</li>
+                <li>Brake and Tire Replacement</li>
+                <li>Oil Changes and Tune-Ups</li>
+                <li>Custom Modifications</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Project Portfolio</h2>
+            <p>Check back here each week to see the latest course assignments:</p>
+            <ul>
+                <li><a href="#">Assignment 1 - [Coming Soon]</a></li>
+                <li><a href="#">Assignment 2 - [Coming Soon]</a></li>
+            </ul>
+        </section>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Oswer Leiva</p>
+        <p>&copy; 2025 Oswer Leiva | Moto Repair Shop</p>
     </footer>
 </body>
 </html>
+
