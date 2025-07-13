@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Request Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Header -->
+    <h1>Motorcycle Service Request Form</h1>
+    <p>Please fill out the form below to request maintenance or upgrades.</p>
+
+    <!-- Form Begins -->
+    <form action="#" method="post">
+        <!-- Text input -->
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname"><br><br>
+
+        <!-- Email input -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Phone input -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <!-- Motorcycle type -->
+        <label for="bike">Motorcycle Make/Model:</label><br>
+        <input type="text" id="bike" name="bike"><br><br>
+
+        <!-- Service type (checkboxes) -->
+        <p>Select Services Needed:</p>
+        <input type="checkbox" id="oil" name="service" value="Oil Change">
+        <label for="oil">Oil Change</label><br>
+        <input type="checkbox" id="brakes" name="service" value="Brake Repair">
+        <label for="brakes">Brake Repair</label><br>
+        <input type="checkbox" id="engine" name="service" value="Engine Tuning">
+        <label for="engine">Engine Tuning</label><br><br>
+
+        <!-- Appointment date -->
+        <label for="date">Preferred Date:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <!-- Radio buttons -->
+        <p>Do you need pickup service?</p>
+        <input type="radio" id="yes" name="pickup" value="Yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="pickup" value="No">
+        <label for="no">No</label><br><br>
+
+        <!-- Text area -->
+        <label for="notes">Additional Notes:</label><br>
+        <textarea id="notes" name="notes" rows="4" cols="40"></textarea><br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit Request">
+    </form>
+
+</body>
+</html>
