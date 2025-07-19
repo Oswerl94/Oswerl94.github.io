@@ -1,90 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Title shown in browser tab -->
-    <title>Oswer's Moto Repair Shop</title>
-
-    <!-- Mobile-friendly scaling -->
+    <title>Oswer's Moto Repair</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Internal CSS styling -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #cc0000;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Section styling */
+        section {
+            background: #fff;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* List styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            max-width: 300px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            background: #222;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Main header with site title and slogan -->
-    <h1>Oswer's Moto Repair Shop</h1>
+    <!-- Site Title -->
+    <h1>Oswer's Moto Repair</h1>
     <p>Your ride. Our mission.</p>
 
-    <!-- Navigation menu (not functional yet) -->
+    <!-- Navigation bar -->
     <nav>
-        <p>
-            <a href="#">Home</a> |
-            <a href="#">Services</a> |
-            <a href="#">Projects</a> |
-            <a href="form.html">Contact</a>
-        </p>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="multimedia.html">Video</a>
+        <a href="links.html">Resources</a>
+        <a href="form.html">Contact</a>
     </nav>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section>
-        <h2>About Me</h2>
+        <h2>Welcome</h2>
         <p>
-            I serve in the United States Air Force as a Water and Fuels Systems Maintenance technician. I’ve always been passionate about motorcycles, computers, and hands-on work. When I'm not maintaining infrastructure, I spend time riding, upgrading bikes, and learning more about web development.
+            Welcome to Oswer's Moto Repair! We are passionate about providing quality motorcycle repair and customization services. 
+            This site is also part of my web programming course project, showcasing HTML, CSS, multimedia, and JavaScript features.
         </p>
         <p>
-            I’m pursuing a career in IT and plan to use my skills from both the military and this program to build something meaningful. My long-term goal is to run my own business, combining technical knowledge with real-world experience in mechanical repair and digital design.
+            Whether it’s routine maintenance, custom modifications, or full restorations, we treat every bike like it’s our own. 
+            Scroll down to see my favorite resources and some of the projects I’m most proud of.
         </p>
     </section>
 
-    <!-- Favorite Websites -->
+    <!-- Favorite Links -->
     <section>
-        <h2>Favorite Sites</h2>
+        <h2>Favorite Motorcycle Resources</h2>
         <ul>
-            <li><a href="https://www.revzilla.com" target="_blank">RevZilla - Motorcycle Gear</a></li>
-            <li><a href="https://www.investing.com" target="_blank">Investing.com - Finance News</a></li>
-            <li><a href="https://www.youtube.com" target="_blank">YouTube - Moto Builds & Tech</a></li>
+            <li><a href="https://www.revzilla.com" target="_blank">RevZilla - Gear & Parts</a></li>
+            <li><a href="https://www.youtube.com/user/FortNine" target="_blank">FortNine YouTube Channel</a></li>
+            <li><a href="https://www.advpulse.com" target="_blank">Adventure Motorcycle News</a></li>
         </ul>
     </section>
 
     <!-- Images Section -->
     <section>
-        <h2>Shop Gallery</h2>
-        <img src="bike1.JPG" alt="Custom motorcycle in the workshop" width="300">
-        <img src="bike2.JPG" alt="Completed streetfighter project" width="300">
+        <h2>Our Projects</h2>
+        <img src="bike1.jpg" alt="Custom motorcycle build">
+        <img src="bike2.jpg" alt="Workshop project with tools">
     </section>
 
-    <!-- Services section listing repair options -->
-    <section>
-        <h2>Services Offered</h2>
-        <ul>
-            <li>Routine Maintenance</li>
-            <li>Engine Diagnostics</li>
-            <li>Brake and Tire Replacement</li>
-            <li>Oil Changes and Tune-Ups</li>
-            <li>Custom Modifications</li>
-        </ul>
-    </section>
-
-    <!-- Placeholder project section -->
-    <section>
-        <h2>Workshop Projects</h2>
-        <p>
-            Details about completed work and service highlights will be added here in future updates.
-        </p>
-    </section>
-
-    <!-- Future plans for the site -->
-    <section>
-        <h2>Next Steps</h2>
-        <p>
-            I plan to expand this webpage by adding a contact form, integrating a services request form, and including a detailed portfolio section. Eventually, I will incorporate CSS to improve the visual layout and responsiveness across all screen sizes.
-        </p>
-    </section>
-
-    <!-- Footer with ownership -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Oswer Leiva | Moto Repair Shop</p>
+        <p>&copy; 2025 Oswer's Moto Repair | Built as part of a Web Programming Course</p>
     </footer>
 
 </body>
