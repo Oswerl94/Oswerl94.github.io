@@ -2,60 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Service Request Form</title>
+    <title>Oswer's Moto Repair - Service Request Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-    <!-- Header -->
-    <h1>Motorcycle Service Request Form</h1>
-    <p>Please fill out the form below to request maintenance or upgrades.</p>
+    <h1>Oswer's Moto Repair</h1>
+    <h2>Service Request Form</h2>
 
-    <!-- Form Begins -->
-    <form action="#" method="post">
-        <!-- Text input -->
-        <label for="fullname">Full Name:</label><br>
-        <input type="text" id="fullname" name="fullname"><br><br>
+    <!-- Navigation menu -->
+    <nav>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="terms.html">Terms</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="multimedia.html">Video</a> |
+            <a href="links.html">Resources</a>
+        </p>
+    </nav>
 
-        <!-- Email input -->
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+    <!-- Service Request Form -->
+    <form>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <!-- Phone input -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
         <label for="phone">Phone Number:</label><br>
         <input type="tel" id="phone" name="phone"><br><br>
 
-        <!-- Motorcycle type -->
         <label for="bike">Motorcycle Make/Model:</label><br>
         <input type="text" id="bike" name="bike"><br><br>
 
-        <!-- Service type (checkboxes) -->
-        <p>Select Services Needed:</p>
-        <input type="checkbox" id="oil" name="service" value="Oil Change">
-        <label for="oil">Oil Change</label><br>
-        <input type="checkbox" id="brakes" name="service" value="Brake Repair">
-        <label for="brakes">Brake Repair</label><br>
-        <input type="checkbox" id="engine" name="service" value="Engine Tuning">
-        <label for="engine">Engine Tuning</label><br><br>
+        <label for="serviceType">Service Type:</label><br>
+        <select id="serviceType" name="serviceType">
+            <option value="oil">Oil Change</option>
+            <option value="brake">Brake Service</option>
+            <option value="tire">Tire Replacement</option>
+            <option value="tuneup">Full Tune-Up</option>
+        </select><br><br>
 
-        <!-- Appointment date -->
-        <label for="date">Preferred Date:</label><br>
-        <input type="date" id="date" name="date"><br><br>
+        <label for="preferredDate">Preferred Date:</label><br>
+        <input type="date" id="preferredDate" name="preferredDate"><br><br>
 
-        <!-- Radio buttons -->
-        <p>Do you need pickup service?</p>
-        <input type="radio" id="yes" name="pickup" value="Yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="pickup" value="No">
-        <label for="no">No</label><br><br>
+        <!-- Quantity of services -->
+        <label for="quantity">Number of Services:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
 
-        <!-- Text area -->
-        <label for="notes">Additional Notes:</label><br>
-        <textarea id="notes" name="notes" rows="4" cols="40"></textarea><br><br>
+        <!-- Button to calculate total cost -->
+        <button type="button" onclick="calculateTotal()">Calculate Total</button><br><br>
 
-        <!-- Submit button -->
+        <!-- Display total cost -->
+        <p>Total Cost: $<span id="total">0</span></p>
+
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+        <!-- Submit button (not functional for backend, just demo) -->
         <input type="submit" value="Submit Request">
     </form>
+
+    <script>
+        function calculateTotal() {
+            // Get quantity from form
+            let quantity = document.getElementById('quantity').value;
+
+            // Fixed price per service
+            let pricePerService = 50;
+
+            // Calculate total
+            let total = quantity * pricePerService;
+
+            // Validate and display
+            if (quantity > 0) {
+                document.getElementById('total').innerText = total;
+            } else {
+                alert("Please enter a valid number of services.");
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Oswer's Moto Repair | Contact us for all your motorcycle needs</p>
+    </footer>
 
 </body>
 </html>
