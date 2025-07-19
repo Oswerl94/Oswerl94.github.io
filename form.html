@@ -4,6 +4,113 @@
     <meta charset="UTF-8">
     <title>Oswer's Moto Repair - Service Request Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Internal CSS styling -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #cc0000;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Form container styling */
+        form {
+            background: #fff;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button, input[type="submit"] {
+            background-color: #cc0000;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #ff3333;
+        }
+
+        /* Total display */
+        .total-display {
+            background: #eee;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,54 +119,53 @@
 
     <!-- Navigation menu -->
     <nav>
-        <p>
-            <a href="index.html">Home</a> |
-            <a href="terms.html">Terms</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="multimedia.html">Video</a> |
-            <a href="links.html">Resources</a>
-        </p>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="multimedia.html">Video</a>
+        <a href="links.html">Resources</a>
+        <a href="form.html">Contact</a>
     </nav>
 
     <!-- Service Request Form -->
     <form>
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
 
-        <label for="bike">Motorcycle Make/Model:</label><br>
-        <input type="text" id="bike" name="bike"><br><br>
+        <label for="bike">Motorcycle Make/Model:</label>
+        <input type="text" id="bike" name="bike">
 
-        <label for="serviceType">Service Type:</label><br>
+        <label for="serviceType">Service Type:</label>
         <select id="serviceType" name="serviceType">
             <option value="oil">Oil Change</option>
             <option value="brake">Brake Service</option>
             <option value="tire">Tire Replacement</option>
             <option value="tuneup">Full Tune-Up</option>
-        </select><br><br>
+        </select>
 
-        <label for="preferredDate">Preferred Date:</label><br>
-        <input type="date" id="preferredDate" name="preferredDate"><br><br>
+        <label for="preferredDate">Preferred Date:</label>
+        <input type="date" id="preferredDate" name="preferredDate">
 
         <!-- Quantity of services -->
-        <label for="quantity">Number of Services:</label><br>
-        <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+        <label for="quantity">Number of Services:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
 
         <!-- Button to calculate total cost -->
-        <button type="button" onclick="calculateTotal()">Calculate Total</button><br><br>
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
 
         <!-- Display total cost -->
-        <p>Total Cost: $<span id="total">0</span></p>
+        <div class="total-display">Total Cost: $<span id="total">0</span></div>
 
-        <label for="comments">Additional Comments:</label><br>
-        <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
 
-        <!-- Submit button (not functional for backend, just demo) -->
+        <!-- Submit button (not connected to a backend, demo only) -->
         <input type="submit" value="Submit Request">
     </form>
 
