@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oswer's Moto Repair - How to Check Tire Pressure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Internal CSS matching homepage style -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #cc0000;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Section styling */
+        section {
+            background: #fff;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            display: block;
+            max-width: 400px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Oswer's Moto Repair</h1>
+    <h2>How to Check Your Motorcycle Tire Pressure</h2>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="multimedia.html">How-To Video</a>
+        <a href="links.html">Resources</a>
+        <a href="form.html">Contact</a>
+    </nav>
+
+    <!-- Why tire pressure matters -->
+    <section>
+        <h2>Why Tire Pressure Matters</h2>
+        <p>
+            Proper tire pressure keeps your motorcycle safe, improves fuel efficiency, and extends tire life.  
+            Riding with low or high pressure can lead to poor handling, uneven wear, or even tire blowouts.  
+        </p>
+    </section>
+
+    <!-- Step-by-step guide -->
+    <section>
+        <h2>Step-by-Step Instructions</h2>
+        <p>1. Make sure your tires are cool before checking the pressure.</p>
+        <p>2. Find the recommended tire pressure in your bike’s owner’s manual or on the tire sidewall.</p>
+        <p>3. Remove the valve cap from your tire’s air valve.</p>
+        <p>4. Press a tire pressure gauge firmly onto the valve stem and read the pressure.</p>
+        <p>5. If it’s too low, add air using a pump. If it’s too high, release some air carefully.</p>
+        <p>6. Replace the valve cap when done.</p>
+    </section>
+
+    <!-- Example Image -->
+    <section>
+        <h2>Example: Using a Tire Pressure Gauge</h2>
+        <img src="tire-gauge.jpg" alt="Checking motorcycle tire pressure with a gauge">
+    </section>
+
+    <!-- Embedded Video -->
+    <section>
+        <h2>Watch the Process</h2>
+        <video controls>
+            <source src="tire-pressure-tutorial.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>This short video demonstrates exactly how to check and adjust your tire pressure.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Oswer's Moto Repair | How-To Maintenance Tips</p>
+    </footer>
+
+</body>
+</html>
