@@ -25,7 +25,6 @@
             text-align: center;
         }
 
-        /* Navigation bar styling */
         nav {
             background: #333;
             padding: 10px;
@@ -43,7 +42,6 @@
             color: #ff3333;
         }
 
-        /* Form container styling */
         form {
             background: #fff;
             max-width: 500px;
@@ -94,13 +92,19 @@
             background-color: #ff3333;
         }
 
-        /* Total display */
         .total-display {
             background: #eee;
             padding: 10px;
             margin-top: 10px;
             text-align: center;
             font-weight: bold;
+        }
+
+        .discount-message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         footer {
@@ -117,12 +121,12 @@
     <h1>Oswer's Moto Repair</h1>
     <h2>Service Request Form</h2>
 
-    <!-- Navigation menu -->
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="terms.html">Terms</a>
         <a href="gallery.html">Gallery</a>
-        <a href="multimedia.html">Video</a>
+        <a href="multimedia.html">How-To Video</a>
         <a href="links.html">Resources</a>
         <a href="form.html">Contact</a>
     </nav>
@@ -156,33 +160,43 @@
         <label for="quantity">Number of Services:</label>
         <input type="number" id="quantity" name="quantity" min="1" value="1">
 
-        <!-- Button to calculate total cost -->
+        <!-- Button to calculate total -->
         <button type="button" onclick="calculateTotal()">Calculate Total</button>
 
-        <!-- Display total cost -->
+        <!-- Display total -->
         <div class="total-display">Total Cost: $<span id="total">0</span></div>
+
+        <!-- Discount message area -->
+        <div class="discount-message" id="discountMessage"></div>
 
         <label for="comments">Additional Comments:</label>
         <textarea id="comments" name="comments" rows="4"></textarea>
 
-        <!-- Submit button (not connected to a backend, demo only) -->
+        <!-- Submit -->
         <input type="submit" value="Submit Request">
     </form>
 
     <script>
         function calculateTotal() {
-            // Get quantity from form
             let quantity = document.getElementById('quantity').value;
-
-            // Fixed price per service
             let pricePerService = 50;
-
-            // Calculate total
             let total = quantity * pricePerService;
 
-            // Validate and display
+            let discountThreshold = 5;  // If customer orders 5 or more services
+            let discountRate = 0.10;    // 10% discount
+            let discountMessage = "";
+
             if (quantity > 0) {
-                document.getElementById('total').innerText = total;
+                if (quantity >= discountThreshold) {
+                    let discountAmount = total * discountRate;
+                    total = total - discountAmount;
+                    discountMessage = `🎉 You qualified for a 10% discount! You saved $${discountAmount.toFixed(2)}.`;
+                } else {
+                    discountMessage = `Order ${discountThreshold} or more services to get a 10% discount!`;
+                }
+
+                document.getElementById('total').innerText = total.toFixed(2);
+                document.getElementById('discountMessage').innerText = discountMessage;
             } else {
                 alert("Please enter a valid number of services.");
             }
