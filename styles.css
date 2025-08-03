@@ -1,65 +1,108 @@
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-header, footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
+h1, h2 {
+    text-align: center;
+    color: #cc0000;
 }
 
+p {
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Navigation bar */
 nav {
-  background: #333;
-  padding: 10px;
-  text-align: center;
+    background: #333;
+    padding: 10px;
+    text-align: center;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #ff3333;
+    color: #ff3333;
 }
 
-main {
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
+/* Section */
 section {
-  background: #fff;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.image-gallery img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
+/* Images */
+img {
+    display: block;
+    max-width: 90%;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/* Video */
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
-ul li a {
-  color: #cc0000;
-  text-decoration: none;
+/* Buttons */
+button, input[type="submit"] {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
-ul li a:hover {
-  text-decoration: underline;
+button:hover, input[type="submit"]:hover {
+    background-color: #ff3333;
+}
+
+/* Total Cost */
+.total-display {
+    background: #eee;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Discount Message */
+.discount-message {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 15px 0;
+    margin-top: 20px;
 }
