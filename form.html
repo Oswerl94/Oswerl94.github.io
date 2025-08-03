@@ -2,56 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Service Request</title>
+  <title>Oswer's Moto Repair - Service Request</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #cc0000;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3333;
+    }
+
+    form {
+      max-width: 600px;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #cc0000;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #ff3333;
+    }
+
+    .total-display, .discount-message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .discount-message {
+      color: green;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Service Request</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="terms.html">Terms</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="multimedia.html">How-To</a>
-      <a href="links.html">Resources</a>
-      <a href="form.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <form>
-      <label>Name:</label>
-      <input type="text" id="name" required>
+  <h1>Oswer's Moto Repair</h1>
+  <h2>Service Request Form</h2>
 
-      <label>Email:</label>
-      <input type="email" id="email" required>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="multimedia.html">How-To Video</a>
+    <a href="links.html">Resources</a>
+    <a href="form.html">Contact</a>
+  </nav>
 
-      <label>Service Type:</label>
-      <select id="serviceType">
-        <option value="oil">Oil Change</option>
-        <option value="brakes">Brake Repair</option>
-        <option value="tune">Tune-Up</option>
-      </select>
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
 
-      <label>Quantity:</label>
-      <input type="number" id="quantity" value="1" min="1">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
 
-      <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <label for="bike">Bike Make/Model:</label>
+    <input type="text" id="bike">
 
-      <div class="total-display">Total: $<span id="total">0.00</span></div>
-      <div id="discountMessage" class="discount-message"></div>
+    <label for="service">Service Type:</label>
+    <select id="service">
+      <option value="oil">Oil Change</option>
+      <option value="brakes">Brake Inspection</option>
+      <option value="tune">Full Tune-Up</option>
+    </select>
 
-      <label>Comments:</label>
-      <textarea></textarea>
+    <label for="quantity">Number of Services:</label>
+    <input type="number" id="quantity" value="1" min="1">
 
-      <input type="submit" value="Submit Request">
-    </form>
-  </main>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+    <div class="total-display">
+      Total Cost: $<span id="total">0.00</span>
+    </div>
+    <div class="discount-message" id="discountMsg"></div>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" rows="4"></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
 
   <footer>
-    <p>&copy; 2025 Oswer Moto Repair</p>
+    <p>&copy; 2025 Oswer's Moto Repair | Serving Riders with Pride</p>
   </footer>
+
+  <script>
+    function calculateTotal() {
+      const qty = parseInt(document.getElementById('quantity').value);
+      const pricePerService = 50;
+      let total = qty * pricePerService;
+      let discountMsg = "";
+
+      if (qty >= 5) {
+        const discount = total * 0.10;
+        total -= discount;
+        discountMsg = `🎉 You saved $${discount.toFixed(2)} with a 10% discount!`;
+      } else {
+        discountMsg = `Order 5 or more services for a 10% discount.`;
+      }
+
+      document.getElementById('total').textContent = total.toFixed(2);
+      document.getElementById('discountMsg').textContent = discountMsg;
+    }
+  </script>
+
 </body>
 </html>
