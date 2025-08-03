@@ -1,19 +1,20 @@
 function calculateTotal() {
-  const qty = parseInt(document.getElementById('quantity').value);
-  const price = 50;
-  let total = qty * price;
-  const discountThreshold = 5;
-  const discountRate = 0.10;
-  let message = '';
+    let quantity = parseInt(document.getElementById('quantity').value);
+    let pricePerService = 50;
+    let total = quantity * pricePerService;
 
-  if (qty >= discountThreshold) {
-    let discount = total * discountRate;
-    total -= discount;
-    message = `You saved $${discount.toFixed(2)} with a 10% discount!`;
-  } else {
-    message = `Buy ${discountThreshold} or more to get a 10% discount.`;
-  }
+    let discountThreshold = 5;
+    let discountRate = 0.10;
+    let discountMessage = "";
 
-  document.getElementById('total').innerText = total.toFixed(2);
-  document.getElementById('discountMessage').innerText = message;
+    if (quantity >= discountThreshold) {
+        let discount = total * discountRate;
+        total -= discount;
+        discountMessage = `🎉 You received a 10% discount! You saved $${discount.toFixed(2)}.`;
+    } else {
+        discountMessage = `Order ${discountThreshold} or more services for a 10% discount.`;
+    }
+
+    document.getElementById('total').innerText = total.toFixed(2);
+    document.getElementById('discountMessage').innerText = discountMessage;
 }
