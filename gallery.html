@@ -2,29 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Oswer's Moto Repair - Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #cc0000;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3333;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Gallery</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="terms.html">Terms</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="multimedia.html">How-To</a>
-      <a href="links.html">Resources</a>
-      <a href="form.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <img src="bike1.JPG" alt="Bike 1">
-    <img src="bike2.JPG" alt="Bike 2">
-  </main>
+  <h1>Oswer's Moto Repair</h1>
+  <h2>Gallery</h2>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="multimedia.html">How-To Video</a>
+    <a href="links.html">Resources</a>
+    <a href="form.html">Contact</a>
+  </nav>
+
+  <!-- Gallery Content -->
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="bike1.JPG" alt="Custom Café Racer Build">
+      <div class="caption">Custom Café Racer Build</div>
+    </div>
+    <div class="gallery-item">
+      <img src="bike2.JPG" alt="Workshop in Action">
+      <div class="caption">Workshop in Action</div>
+    </div>
+    <div class="gallery-item">
+      <img src="tire-gauge.jpg" alt="Tire Pressure Gauge Demo">
+      <div class="caption">Tire Pressure Check</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Oswer's Moto Repair</p>
+    <p>&copy; 2025 Oswer's Moto Repair | Powered by Passion</p>
   </footer>
+
 </body>
 </html>
