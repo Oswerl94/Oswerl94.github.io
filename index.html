@@ -1,54 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Oswer's Moto Repair | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>Oswer's Moto Repair</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        nav {
+            background-color: #cc0000;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #ffe6e6;
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #cc0000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-link {
+            display: inline-block;
+            background-color: #cc0000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .button-link:hover {
+            background-color: #a30000;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Oswer's Moto Repair</h1>
-    <p>Your ride. Our mission.</p>
+
+    <header>
+        <h1>Oswer's Moto Repair</h1>
+        <p>Your ride. Our mission.</p>
+    </header>
+
     <nav>
-      <a href="index.html">Home</a>
-      <a href="terms.html">Terms</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="multimedia.html">How-To Video</a>
-      <a href="links.html">Resources</a>
-      <a href="form.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="multimedia.html">How-To Video</a>
+        <a href="links.html">Resources</a>
+        <a href="form.html">Contact</a>
     </nav>
-  </header>
 
-  <main>
     <section>
-      <h2>Welcome</h2>
-      <p>We bring motorcycles back to life with precision repairs and custom upgrades. Proudly serving riders with passion and quality workmanship.</p>
-    </section>
-
-    <section class="image-gallery">
-      <img src="bike1.JPG" alt="Custom Motorcycle">
-      <img src="bike2.JPG" alt="Shop Tools and Setup">
+        <h2>Welcome</h2>
+        <p>Hello, I'm Oswer, a motorcycle enthusiast with a passion for bringing bikes back to life. I specialize in maintenance and custom builds for riders who take pride in their machines.</p>
+        <p>This site showcases my repair shop, where quality work and customer satisfaction ride side by side. Whether you're here for routine service or custom upgrades, you're in the right place.</p>
     </section>
 
     <section>
-      <h2>Maintenance Tips</h2>
-      <p>Visit our <a href="multimedia.html">How-To Page</a> for simple guides like checking your tire pressure.</p>
-      <img src="tire-gauge.jpg" alt="Tire Gauge How-To Preview">
+        <h2>Favorite Motorcycle Resources</h2>
+        <ul>
+            <li><a href="https://www.revzilla.com" target="_blank">RevZilla - Gear & Parts</a></li>
+            <li><a href="https://www.youtube.com/user/FortNine" target="_blank">FortNine YouTube Channel</a></li>
+            <li><a href="https://www.advpulse.com" target="_blank">Adventure Motorcycle News</a></li>
+        </ul>
     </section>
 
     <section>
-      <h2>Top Resources</h2>
-      <ul>
-        <li><a href="https://revzilla.com" target="_blank">RevZilla</a></li>
-        <li><a href="https://fortnine.ca" target="_blank">FortNine Canada</a></li>
-        <li><a href="https://advpulse.com" target="_blank">ADV Pulse</a></li>
-      </ul>
+        <h2>Our Projects</h2>
+        <img src="bike1.JPG" alt="Custom motorcycle build">
+        <img src="bike2.JPG" alt="Workshop project with tools">
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Oswer's Moto Repair</p>
-  </footer>
+    <section>
+        <h2>Maintenance Tips: How-To Guides</h2>
+        <p>Want to learn some simple DIY motorcycle maintenance skills?  
+        Check out our new How-To section where we teach quick and easy tips to keep your bike in top shape.</p>
+        <img src="tire-gauge.jpg" alt="Checking motorcycle tire pressure">
+        <p>Our latest guide shows you how to check and adjust your motorcycle tire pressure safely.  
+        It includes step-by-step instructions, a detailed image, and a helpful video tutorial.</p>
+        <p style="text-align:center;">
+            <a href="multimedia.html" class="button-link">View the How-To Guide</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oswer's Moto Repair | Built as part of a Web Programming Course</p>
+    </footer>
+
 </body>
 </html>
